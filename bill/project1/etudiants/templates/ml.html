@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My app</title>
+    </head>
+    
+    <body style="text-align:center;">
+        <h1 style="color:blue;">veuillez indique vos caracteristque nous allons predire le prix</h1>
+        <form action="/etudiants/predict" method="POST">
+            {% csrf_token %}
+            <div>
+                <label>veuillez saisir l'autonomie de ton choix</label>
+                <input type='number' name='baterieAuto' />
+            </div>
+
+            <div>
+                <label>veuillez saisir la capacite memoire de ton choix</label>
+                <input type='number' name='capaciteMemoire' />
+            </div>
+
+            <div>
+                <label>veuillez saisir le pixel du tablau</label>
+                <input type='number' name='tableauPixel' />
+            </div>
+
+            <div>
+                <label>veuillez saisir l'ancienete du telephone</label>
+                <input type='number' name='ancieneteModele' />
+            </div>
+
+
+            <div>
+            <input type='submit'/>
+            </div>
+        </form>
+    </body>
+</html>
